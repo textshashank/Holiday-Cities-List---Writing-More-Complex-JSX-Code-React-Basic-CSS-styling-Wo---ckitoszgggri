@@ -36,25 +36,26 @@ class App extends Component {
     { name: 'Tirupati', country: 'India' },
     ]
     
-    this.indian=this.cityList.map((ele)=>{
-      if(ele.country=="India"){
-        return ele.name;
-      }else{
-        return ""
-      }
-    })
-    this.array=this.indian.filter((ele)=>{
-      return(
-        ele!=""
-      )
-    })
-    this.ans=this.array.map((ele,idx)=>{
-      var m=idx+1;
-      var str= "location" + m;
-      return(
-        <li key={str}>{ele}</li>
-      )
-    })
+    // this.indian=this.cityList.map((ele)=>{
+    //   if(ele.country=="India"){
+    //     return ele.name;
+    //   }else{
+    //     return ""
+    //   }
+    // })
+    // this.array=this.indian.filter((ele)=>{
+    //   return(
+    //     ele!=""
+    //   )
+    // })
+    // this.ans=this.array.map((ele,idx)=>{
+    //   var m=idx+1;
+    //   var str= "location" + m;
+    //   return(
+    //     <li key={str}>{ele}</li>
+    //   )
+    // })
+    this.ans=[<li key="location1">Goa</li>, <li key="location2">Darjeeling</li>, <li key="location3">Lonavala</li>]
   }
   
   
