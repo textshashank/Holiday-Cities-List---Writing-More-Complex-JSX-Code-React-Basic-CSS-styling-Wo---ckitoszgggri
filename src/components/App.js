@@ -35,12 +35,39 @@ class App extends Component {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
+    
+    this.indian=this.cityList.map((ele)=>{
+      if(ele.country=="India"){
+        return ele.name;
+      }else{
+        return ""
+      }
+    })
+    this.array=this.indian.filter((ele)=>{
+      return(
+        ele!=""
+      )
+    })
+    this.ans=this.array.map((ele,idx)=>{
+      var m=idx+1;
+      var str= "location" + m;
+      return(
+        <li key={str}>{ele}</li>
+      )
+    })
   }
-
+  
+  
   render() {
+    
+    
     return (
+      
       <div id="main">
         {/* Do not remove the main div */}
+        <ol>
+          {this.ans}
+        </ol>
       </div>
     )
   }
